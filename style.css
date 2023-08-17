@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /*Font*/
+  --base-font: 'Mulish', sans-serif;
+  /*Size*/
+  font-size: 62.5%;
+  /*Colors*/
+  --white: #FFFFFF;
+  --light-gray: #F9F4FB;
+  --accent-color: #B52184;
+  --text-base-color: #312D64;
+  --gradient-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: var(--base-font);
+}
+
+img {
+  width: 100%;
+}
+
+/*Typography*/
+h1 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin: 1.7rem 0 0.5rem 0;
+}
+
+h2 {
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+}
+
+/*Form*/
+button, input, fieldset, textarea {
+  border: none;
+  background: none;
+  font-family: var(--base-font);
+}
+
+/*Header*/
+header {
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  color: var(--text-base-color);
+  width: auto;
+  margin: 0.5rem auto 3.5rem;
+}
+
+header #button-arrow { 
+  width: 5.8rem;
+  height: 10.5rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  transition: filter 300ms;
+}
+
+header .button-arrow:hover {
+  filter: brightness(0.7);
+}
+
+header .button-arrow img {
+  width: 3rem;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-background);
+  padding: 5.3rem 3.9rem 5.5rem;
+  display: grid;
+  gap: 4.9rem;
+}
+
+main .cards {
+  background: var(--white);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+main .cards img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+main .cards h2, p {
+  width: 26.5rem;
+}
+
+/*Contato*/
+form {
+  width: 100%;
+  height: 100%;
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+form legend {
+  margin-bottom: 4.3rem;
+}
+
+form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+form input, textarea {
+  width: 100%;
+  border: 0.15rem solid var(--text-base-color);
+  border-radius: 1.6rem;
+  padding: 1.2rem 1.6rem 1.6rem;
+  color: var(--text-base-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+form textarea {
+  height: 12.6rem;
+}
+
+form input::placeholder, textarea::placeholder {
+  color: var(--text-base-color);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+form input::placeholder {
+  padding-left: 2.8rem;
+}
+
+form .button {
+  background: var(--gradient-background);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: filter 200ms;
+}
+
+form button:hover {
+  filter: brightness(0.9);
+}
+
+form #name {
+  background: url(images/name.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+form #email {
+  background: url(images/email.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+/*Footer*/
+footer {
+  background: var(--gradient-background);
+  padding: 3.2rem 1.6rem;
+}
+
+footer p {
+  margin: auto;
+  color: var(--white);
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/*Media*/
+
+@media (min-width: 820px) {
+  main .cards {
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  main .cards img {
+    width: 16rem;
+    margin-bottom: 3.3rem;
+  }
+  
+  main .cards .textcards {
+    width: 26.5rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    max-height: 83.6rem;
+    text-align: left;
+  }
+
+  header .partb {
+    order: 1;
+    margin-left: 10.9rem;
+    margin-top: 31.2rem;
+  }
+
+  header #logo {
+    width: 70.2rem;
+    height: auto;
+    order: 2;
+  }
+
+  header h1 {
+    font-size: 5.8rem;
+    line-height: 7.3rem;
+  }
+
+  header p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+    gap: 8rem;
+  }
+
+  header #button-arrow {
+    margin-left: 0;
+    justify-self: flex-end;
+    gap: 17.9rem;
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+
+  }
+
+  main .cards {
+    display: flex;
+    flex-direction: column;
+    padding: 3.2rem;
+    border-radius: 2.4rem;
+    align-items: first baseline;
+  }
+
+  main .textcards {
+    text-align: left;
+  }
+  main .cards img {
+    width: 9.7rem;
+    margin-bottom: 4rem;
+  }
+
+  form {
+    padding-left: 10.9rem;
+    background: url(/images/stars.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    flex-direction: column;
+ 
+  }
+
+  form fieldset, .button {
+    width: 59.5rem;
+  }
+}
+
